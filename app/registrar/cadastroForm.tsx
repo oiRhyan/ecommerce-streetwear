@@ -12,7 +12,7 @@ const CadastroForm = (props: Props) => {
         const [user, setUser] = useState({
             nome: "",
             email: "",
-            senha: "",
+            password: "",
         })
 
         const router = useRouter()
@@ -21,7 +21,7 @@ const CadastroForm = (props: Props) => {
             const data = {
                 name: user.nome,
                 email: user.email,
-                senha: user.senha
+                password: user.password
             }
             axios.post('/api/cadastro', data)
             .then((response) => {
@@ -55,7 +55,7 @@ const CadastroForm = (props: Props) => {
                 <input 
                 type='text'
                 className='p-2 border-gray-300 border-[1px] rounded-lg w-[300px] mb-4 focus:outline-none focus:border-gray-600 text-black'
-                id='name'
+                id='email'
                 value={user.email}
                 placeholder='Digite seu email: '
                 onChange={(e) => setUser({...user, email: e.target.value})}
@@ -66,10 +66,10 @@ const CadastroForm = (props: Props) => {
                 <input 
                 type='text'
                 className='p-2 border-gray-300 border-[1px] rounded-lg w-[300px] mb-4 focus:outline-none focus:border-gray-600 text-black'
-                id='name'
-                value={user.senha}
+                id='password'
+                value={user.password}
                 placeholder='Digite sua senha: '
-                onChange={(e) => setUser({...user, senha: e.target.value})}
+                onChange={(e) => setUser({...user, password: e.target.value})}
                 />
                 <button onClick={Registrar} className={styles.form_btn}>
                     <span> Criar Conta </span>
