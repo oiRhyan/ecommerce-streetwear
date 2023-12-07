@@ -77,7 +77,7 @@ const CadastroForm = (props: Props) => {
                 <Link href='/login' className={styles.form_text}>
                     Já possuí uma conta?
                 </Link>
-                <Link href="/" className={styles.form_sub_text}>
+                <Link href="/login" className={styles.form_sub_text}>
                     Entrar
                 </Link>
             </div>
