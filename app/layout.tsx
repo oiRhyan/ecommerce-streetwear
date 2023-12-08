@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Provider from './components/Provider'
+import localFont from 'next/font/local'
 import './globals.sass'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const mainFontFamily = localFont({
+  src: './sass/fonts/Nexa/Nexa-Heavy.ttf'
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mainFontFamily.className}>
         <Provider>
           {children}
         </Provider>

@@ -11,7 +11,7 @@ const SearchBar = (props: Props) => {
             <input
             type='text'
             className='outline-none bg-transparent ml-2 caret-blue-500 placeholder:font-light placeholder:text-gray-600 text-[15px]'
-            placeholder='Pesquisar'
+            placeholder='...'
             autoComplete='false'
             />
         </div>

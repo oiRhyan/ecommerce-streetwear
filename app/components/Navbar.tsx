@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Logo from '../../public/imgs/logo.png'
 import SearchBar from './SearchBar';
 import styles from '../sass/navbar.module.sass';
-import { CiUser } from 'react-icons/ci'
+import { FaRegUserCircle } from "react-icons/fa";
 import { CiShoppingCart } from "react-icons/ci";
 import {BsChevronCompactUp} from "react-icons/bs"
 import {signIn, signOut, useSession } from 'next-auth/react';
@@ -51,12 +51,12 @@ const Navbar = (props: Props) => {
             <div className={styles.navbar_base}>
                 <div className={styles.navbar_base}>
                     <Link href='/'>
-                        <Image src={Logo} height={128} width={128} alt='logo'/>
+                        <Image src={Logo} height={150} width={150} alt='logo' />
                     </Link>
                     <nav className={styles.navbar_base}>
                         <ul className={styles.navbar_base}>
                             <li>
-                                <Link href="/" className=''> Inicio </Link>
+                                <Link href="/" className=''> Vestuário </Link>
                             </li>
                             {session?.user &&  (
                             <li>
@@ -81,7 +81,7 @@ const Navbar = (props: Props) => {
                         </Link>
                     </div>
                     <div className={styles.user_icon} onClick={() => setShowProfile(!showProfile)}>
-                            <CiUser/>
+                                <FaRegUserCircle />
                         <div className={`text-xs mg-1 ${showProfile ? "" : "hidden"} ${styles.navbar_login}`} id=''> 
                         <SignOut/>
                         <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>
