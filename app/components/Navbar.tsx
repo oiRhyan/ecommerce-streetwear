@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../../public/imgs/logo.png'
+import Logo from '../../public/imgs/angels-stree-wear.png'
 import SearchBar from './SearchBar';
 import styles from '../sass/navbar.module.sass';
 import { FaRegUserCircle } from "react-icons/fa";
@@ -51,7 +51,7 @@ const Navbar = (props: Props) => {
             <div className={styles.navbar_base}>
                 <div className={styles.navbar_base}>
                     <Link href='/'>
-                        <Image src={Logo} height={150} width={150} alt='logo' />
+                        <Image src={Logo} height={140} width={120} alt='logo' />
                     </Link>
                     <nav className={styles.navbar_base}>
                         <ul className={styles.navbar_base}>
