@@ -30,7 +30,7 @@ const Navbar = (props: Props) => {
                             Sair 
                     </li>
                     <li className='whitespace-nowrap hover: bg-gray-100 hover: text-neutral-900 px-5 py-2 cursor-pointer'>
-                            <Link href='/addproduct'>
+                            <Link href='/adicionar-produto'>
                                 Adicionar 
                             </Link>
                     </li>

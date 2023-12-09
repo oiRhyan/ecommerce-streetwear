@@ -1,11 +1,12 @@
 import Navbar from './components/Navbar'
 import { getCurrentUser } from './lib/session'
+import styles from '@/app/sass/navbar.module.sass'
 
 export default async function Home() {
   const user = await getCurrentUser()
   //console.log(user)
   return (
-    <div className='px-5 max-w-[1280px] mx-auto'>
+    <div className={styles.navbar_space}>
       <Navbar/>
     </div>
   )
