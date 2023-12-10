@@ -24,7 +24,7 @@ const Productform = (props: Props) => {
         category: '',
         style: '',
         inventory: 0,
-        color: '#FFFF',
+        color: '#121212',
         price: 0,
         images: '',
         userId: id,
@@ -100,7 +100,7 @@ const Productform = (props: Props) => {
             <div className='text-black mt-4 '>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                     <div>
-                        <label htmlFor='title' className='font-medium text-white'>
+                        <label htmlFor='title' className='font-medium text-black'>
                                 Titulo: 
                         </label>
                         <input 
@@ -113,7 +113,7 @@ const Productform = (props: Props) => {
                         />
                     </div>
                     <div>
-                        <label htmlFor='category' className='font-medium text-white'>
+                        <label htmlFor='category' className='font-medium text-black'>
                                     Categoria: 
                         </label>
                         <input 
@@ -126,7 +126,7 @@ const Productform = (props: Props) => {
                             />
                     </div>
                     <div>
-                        <label htmlFor='style' className='font-medium text-white'>
+                        <label htmlFor='style' className='font-medium text-black'>
                                     Estilo: 
                         </label>
                         <input 
@@ -139,7 +139,7 @@ const Productform = (props: Props) => {
                             />
                     </div>
                     <div>
-                        <label htmlFor='store' className='font-medium text-white'>
+                        <label htmlFor='store' className='font-medium text-black'>
                                     Estoque: 
                         </label>
                         <input 
@@ -152,7 +152,7 @@ const Productform = (props: Props) => {
                             />
                     </div>
                     <div>
-                        <label htmlFor='size' className='font-medium text-white'>
+                        <label htmlFor='size' className='font-medium text-black'>
                                     Tamanho: 
                         </label>
                         <input 
@@ -166,7 +166,7 @@ const Productform = (props: Props) => {
                         <Size setFormData={setFormData}/>
                     </div>
                     <div>
-                    <label htmlFor='inventory' className='font-medium text-white'>
+                    <label htmlFor='inventory' className='font-medium text-black'>
                                     Disponibilidade: 
                     </label>
                     <input 
@@ -179,7 +179,7 @@ const Productform = (props: Props) => {
                             />
                     </div>
                     <div>
-                    <label htmlFor='price' className='font-medium text-white'>
+                    <label htmlFor='price' className='font-medium text-black'>
                                     Valor: 
                     </label>
                     <input 
@@ -193,7 +193,7 @@ const Productform = (props: Props) => {
                     </div>
                     <div>
                         <div>
-                        <label htmlFor='color' className='font-medium text-white'>
+                        <label htmlFor='color' className='font-medium text-black'>
                                     Cor (opcional): 
                         </label>
                         <input 
@@ -216,7 +216,7 @@ const Productform = (props: Props) => {
                     Adicione uma Imagem
                 </label>
                 <ImageUpload info={info} updateInfo={updateInfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
-                <button onClick={postData} className='text-white mt-10 border-[1px] bg-purple-500 rounded-lg px-5 p-2'>
+                <button onClick={postData} className='text-black mt-10 border-[1px] bg-purple-500 rounded-lg px-5 p-2'>
                     Enviar Produto
                 </button>
             </div>
