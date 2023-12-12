@@ -82,7 +82,7 @@ const Productform = (props: Props) => {
     const postData = async () => {
         handleImageChange()
         try{
-            const response = await axios.post('/api/adicionarProduto', formData)
+            const response = await axios.post('/api/addproduto', formData)
             router.push('/')
             console.log(response)
         }

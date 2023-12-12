@@ -56,11 +56,11 @@ const Navbar = (props: Props) => {
                     <nav className={styles.navbar_base}>
                         <ul className={styles.navbar_base}>
                             <li>
-                                <Link href="/" className=''> Vestuário </Link>
+                                <Link href="/" className=''> Inicio </Link>
                             </li>
                             {session?.user &&  (
                             <li>
-                                <Link href="myproducts" className=''> Produtos </Link>
+                                <Link href="myproducts" className=''> Vestuário </Link>
                             </li>
                             )}
                             <li>
