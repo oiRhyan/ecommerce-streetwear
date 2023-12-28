@@ -94,10 +94,10 @@ const Filter = (props: Props) => {
         <div className='relative'>
             <div className={styles.filter}>
                 <div className='flex items-center justify-between px-5 py-4'>
-                        <h1 className='text-neutral-800'> Filtros </h1>
-                        <BsSliders2Vertical size={20} className='text-neutral-600' />
+                        <h1 className='text-white'> Filtros </h1>
+                        <BsSliders2Vertical size={20} className='text-white' />
                 </div>
-                <div className='flex flex-col py-3 pb-5 tet-sm text-neutral-600 border-b-[0.5px]'>
+                <div className='flex flex-col py-3 pb-5 tet-sm text-white border-b-[0.5px]'>
                         <span
                         className={`py-3 px-5 ${selectedCategories.includes('Moletons') ? "bg-orange-500":""}`}
                         onClick={() => toggleCategory('Moletons')}
@@ -131,37 +131,37 @@ const Filter = (props: Props) => {
                 </div>
                 <div className='border-b-[0.5px] pb-10'>
                     <div className='flex items-center justify-between px-5 py-4 border-b-[0.5px] mb-5'>
-                        <h1 className='text-neutral-800'>
+                        <h1 className='text-white'>
                                 Preços
                         </h1>
-                        <BsChevronUp size={18} className= 'text-neutral-600'/>
+                        <BsChevronUp size={18} className= 'text-white'/>
                     </div>
                     <div className='grid grid-cols-2 gap-5 px-5 overflow-hidden'>
                         <div className='flex flex-col justify-center items-center'>
-                                <label className='text-[15px] opacity-75'>
+                                <label className='text-[15px] opacity-75 text-white'>
                                         Min
                                 </label>
                                 <div className='relative'>
                                         <span className='absolute left-3 top-1 '>
                                                 $
                                         </span>
-                                        <input type='number' name='min' id='' onChange={handleMinChange} value={price.min} className='w-[200px] outline-none border-[1px] rounded-lg px-2 text-center py-[2px]'/>
+                                        <input type='number' name='min' id='' onChange={handleMinChange} value={price.min} className='w-[200px] outline-none border-[1px] rounded-lg px-2 text-center py-[2px]' placeholder='...'/>
                                 </div>
-                                <label className='text-[15px] opacity-75'>
+                                <label className='text-[15px] opacity-75 text-white'>
                                         Max
                                 </label>
                                 <div className='relative'>
                                         <span className='absolute left-3 top-1 '>
                                                 $
                                         </span>
-                                        <input type='number' name='max' id='' onChange={handleMaxChange} value={price.max} className='w-[200px] outline-none border-[1px] rounded-lg text-center py-[2px]'/>
+                                        <input type='number' name='max' id='' onChange={handleMaxChange} value={price.max} className='w-[200px] outline-none border-[1px] rounded-lg text-center py-[2px]' placeholder='...'/>
                                 </div>
                         </div>
                     </div>
                 </div>
                 <div className='border-b-[0.5px]'>
                         <div className='flex items-center justify-between px-5 py-4 border-b-[0.5px] mb-5'>
-                        <h1 className='text-neutral-800'>
+                        <h1 className='text-white'>
                                 Cores
                         </h1>
                         </div>
@@ -174,6 +174,37 @@ const Filter = (props: Props) => {
                                     </li>
                                 ))}
                         </ul>
+                </div>
+                <div className='sizes'>
+                    <div className='flex items-center justify-between px-5 py-4 border-b-[0.5px] mb-5'>
+                        <h1 className='text-white'>
+                                Tamanhos
+                        </h1>
+                        <div className={styles.espace}>
+                        <ul className='grid grid-cols-2 px-5 gap-5'>
+                            <li className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('P') ? 'bg-neutral-900 text-white': ''}`}
+                            onClick={() => toggleSize('P')}>
+                                P
+                            </li>
+                            <li className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('M') ? 'bg-neutral-900 text-white': ''}`}
+                            onClick={() => toggleSize('M')}>
+                                M
+                            </li>
+                            <li className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('G') ? 'bg-white text-white': ''}`}
+                            onClick={() => toggleSize('G')}>
+                                G
+                            </li>
+                            <li className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('GG') ? 'bg-neutral-900 text-white': ''}`}
+                            onClick={() => toggleSize('GG')}>
+                                GG
+                            </li>
+                            <li className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer ${selectedSize.includes('XG') ? 'bg-neutral-900 text-white': ''}`}
+                            onClick={() => toggleSize('XG')}>
+                                XG
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

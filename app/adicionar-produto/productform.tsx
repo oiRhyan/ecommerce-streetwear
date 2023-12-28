@@ -96,69 +96,69 @@ const Productform = (props: Props) => {
             <div>
                 <Navbar/>
             </div>
-            <h1 className='text-3xl font-semibold py-6'> Adicione seu Produto </h1>
+            <h1 className='text-3xl font-semibold py-6 text-white'> Adicione seu Produto </h1>
             <div className='text-black mt-4 '>
                 <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                     <div>
-                        <label htmlFor='title' className='font-medium text-black'>
+                        <label htmlFor='title' className='font-medium text-white'>
                                 Titulo: 
                         </label>
                         <input 
                         placeholder='...'
                         type="text"
-                        className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                        className='w-full h-[50px] border-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                         name='title'
                         value={formData.title}
                         onChange={handleChange}
                         />
                     </div>
                     <div>
-                        <label htmlFor='category' className='font-medium text-black'>
-                                    Categoria: 
+                        <label htmlFor='category' className='font-medium text-white'>
+                                    Estilo: 
                         </label>
                         <input 
                             placeholder='...'
                             type="text"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] border-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='category'
                             value={formData.category}
                             onChange={handleChange}
                             />
                     </div>
                     <div>
-                        <label htmlFor='style' className='font-medium text-black'>
-                                    Estilo: 
+                        <label htmlFor='style' className='font-medium text-white'>
+                                    Modelo: 
                         </label>
                         <input 
                             placeholder='...'
                             type="text"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] border-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='style'
                             value={formData.style}
                             onChange={handleChange}
                             />
                     </div>
                     <div>
-                        <label htmlFor='store' className='font-medium text-black'>
-                                    Estoque: 
+                        <label htmlFor='store' className='font-medium text-white'>
+                                    Drop: 
                         </label>
                         <input 
                             placeholder='...'
                             type="text"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='store'
                             value={formData.store}
                             onChange={handleChange}
                             />
                     </div>
                     <div>
-                        <label htmlFor='size' className='font-medium text-black'>
+                        <label htmlFor='size' className='font-medium text-white'>
                                     Tamanho: 
                         </label>
                         <input 
                             placeholder='...'
                             type="text"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='size'
                             value={formData.size}
                             onChange={handleChange}
@@ -166,26 +166,26 @@ const Productform = (props: Props) => {
                         <Size setFormData={setFormData}/>
                     </div>
                     <div>
-                    <label htmlFor='inventory' className='font-medium text-black'>
+                    <label htmlFor='inventory' className='font-medium text-white'>
                                     Disponibilidade: 
                     </label>
                     <input 
                             placeholder='...'
                             type="number"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='inventory'
                             value={formData.inventory}
                             onChange={handlePriceChange}
                             />
                     </div>
                     <div>
-                    <label htmlFor='price' className='font-medium text-black'>
+                    <label htmlFor='price' className='font-medium text-white'>
                                     Valor: 
                     </label>
                     <input 
                             placeholder='...'
                             type="number"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='price'
                             value={formData.price}
                             onChange={handlePriceChange}
@@ -193,13 +193,13 @@ const Productform = (props: Props) => {
                     </div>
                     <div>
                         <div>
-                        <label htmlFor='color' className='font-medium text-black'>
+                        <label htmlFor='color' className='font-medium text-white'>
                                     Cor (opcional): 
                         </label>
                         <input 
                             placeholder='...'
                             type="text"
-                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-pink-500 px-3 focus:border-2 outline-none '
+                            className='w-full h-[50px] boder-radius-[1px] rounded-lg focus:border-orange-500 px-3 focus:border-2 outline-none '
                             name='color'
                             value={formData.color}
                             onChange={handleChange}
@@ -208,15 +208,15 @@ const Productform = (props: Props) => {
                         <Color setFormData={setFormData} Color={formData.color}/>
                     </div>
                 </div>
-                <label htmlFor="" className='mt-10 inline-block font-medium'>
+                <label htmlFor="" className='mt-10 inline-block font-medium text-white'>
                     Descrição do seu Produto
                 </label>
                 <Para setDescription={setDescription} description={formData.description} />
-                <label htmlFor="" className='mt-10 inline-block font-medium'>
+                <label htmlFor="" className='mt-10 inline-block font-medium text-white'>
                     Adicione uma Imagem
                 </label>
                 <ImageUpload info={info} updateInfo={updateInfo} imageUrls={imageUrls} setImageUrls={setImageUrls} handleImageChange={handleImageChange}/>
-                <button onClick={postData} className='text-black mt-10 border-[1px] bg-purple-500 rounded-lg px-5 p-2'>
+                <button onClick={postData} className='text-white mt-10 border-[1px] bg-orange-500 rounded-lg px-5 p-2'>
                     Enviar Produto
                 </button>
             </div>

@@ -44,14 +44,14 @@ const Color:React.FC<Props> = ({setFormData, Color}) => {
     return (
         <div>
             <div className='flex items-center justify-between mt-3'>
-                <button className='block border-[1px] rounded-lg px-3 text-[14px]' onClick={() => setOpen(!open)} title='color'>
+                <button className='block border-[1px] rounded-lg px-3 text-[14px] text-white' onClick={() => setOpen(!open)} title='color'>
                         Selecione uma Cor:
                 </button>
                 {open && (
                     <ColorPicker color={color} onChange={(color) => setColor(color.hex)} />
                 )}
-                <button className='flex item-center space-x-1 border-[1px] rounded-lg p-1 px-3 text-[14px]' onClick={handleColorButtonClick}>
-                        Adicione <GrAdd className="ml-2" size={18} />
+                <button className='flex item-center space-x-1 border-[1px] rounded-lg p-1 px-3 text-[14px] text-white' onClick={handleColorButtonClick}>
+                        Adicione <GrAdd className="ml-2 text-white" size={18} />
                 </button>
             </div>
             <div className='mt-5 '>
@@ -59,10 +59,10 @@ const Color:React.FC<Props> = ({setFormData, Color}) => {
                     <div key={index} className='flex items-center spx-x-4 mb-2 ml-2 gap-2'>
                         <div style={{width:"40px", height:"40px", borderRadius: '100%', backgroundColor:selectedColor, display:'inline-block'}}>
                         </div>
-                        <span className='border-[1px] rounded-lg p-1 px-3 text-[14px] '>
+                        <span className='border-[1px] rounded-lg p-1 px-3 text-[14px] text-white '>
                             {selectedColor}
                         </span>
-                        <button className='border-[1px] rounded-lg p-1 px-3 text-[14px]' onClick={() => handleDeleted(index)}>
+                        <button className='border-[1px] rounded-lg p-1 px-3 text-[14px] text-white' onClick={() => handleDeleted(index)}>
                                 Apagar
                         </button>
                     </div>

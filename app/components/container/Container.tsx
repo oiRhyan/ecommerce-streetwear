@@ -1,16 +1,16 @@
 import React from 'react'
 import styles from '@/app/sass/container.module.sass'
 import Link from 'next/link'
-import Filter from './Filter'
+import Filter from '@/app/components/container/Filter'
 import Item from './Item'
 
 type Props = {}
 
 const Container = (props: Props) => {
     return (
-        <div>
+        <div className='mb-[200px]'>
             <div className={styles.container}>
-                <Link href='/filters' className='opacity-60'>
+                <Link href='/myproducts' className='opacity-60'>
                     <div>
                         <Filter/>
                     </div>

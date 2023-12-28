@@ -18,11 +18,15 @@
     "next": "14.0.3",
     "next-auth": "^4.24.5",
     "next-cloudinary": "^5.11.0",
+    "next-videos": "^1.4.1",
     "openssl": "^2.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "react-pick-color": "^2.0.0"
+    "react-pick-color": "^2.0.0",
+    "react-rating": "^2.0.5",
+    "react-rating-star-with-type": "^1.2.1",
+    "stripe": "^14.9.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

@@ -5,6 +5,7 @@ import styles from '@/app/sass/form.module.sass'
 import Link from 'next/link'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import Footer from '../components/Footer'
 
 type Props = {}
 
@@ -37,8 +38,8 @@ const CadastroForm = (props: Props) => {
     return (
         <div className={styles.form}>
             <div className='p-10 rounded-lg shadow-lg flex flex-col'>
-                <h1 className='text-xl font-medium mb-4'> Registrar</h1>
-                <label htmlFor='' className='mb-2'>
+                <h1 className='text-xl font-medium mb-4 text-white'> Cadastro </h1>
+                <label htmlFor='' className='mb-2 text-white'>
                         Nome
                 </label>
                 <input
@@ -49,7 +50,7 @@ const CadastroForm = (props: Props) => {
                 placeholder='Digite seu nome:'
                 onChange={(e) => setUser({...user, nome: e.target.value})}
                 />
-                <label htmlFor='' className='mb-2'>
+                <label htmlFor='' className='mb- text-white'>
                         Email
                 </label>
                 <input 
@@ -60,7 +61,7 @@ const CadastroForm = (props: Props) => {
                 placeholder='Digite seu email: '
                 onChange={(e) => setUser({...user, email: e.target.value})}
                 />
-                <label htmlFor='' className='mb-2'>
+                <label htmlFor='' className='mb-2 text-white'>
                         Senha
                 </label>
                 <input 
@@ -81,6 +82,7 @@ const CadastroForm = (props: Props) => {
                     Entrar
                 </Link>
             </div>
+            <Footer/>
         </div>
     )
 }

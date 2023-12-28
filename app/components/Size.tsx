@@ -33,11 +33,11 @@ const Size: React.FC<ParaProps> = ({setFormData}) => {
             {sizes.map((size) => (
                 <button
                 key={size}
-                className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer px-3 mt-4 mb-5 mr-5 ${selectedSizes.includes(size) ? "bg-gray-500":""}`}
+                className={`border-[0.5px] rounded-lg text-center text-[14px] py-[2px] cursor-pointer px-3 mt-4 mb-5 mr-5 text-white ${selectedSizes.includes(size) ? "bg-gray-500":""}`}
                 onClick={() => handleSizeButtonClick(size)}
                 > {size }</button>
             ))}
-            <button onClick={handleSubmit}>
+            <button onClick={handleSubmit} className='text-white'>
                 Enviar
             </button>
         </div>

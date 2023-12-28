@@ -3,11 +3,11 @@ import { useState } from 'react';
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '../../public/imgs/angels-stree-wear.png'
+import Logo from '../../public/imgs/street-logo.png'
 import SearchBar from './SearchBar';
 import styles from '../sass/navbar.module.sass';
-import { CiUser } from "react-icons/ci";
-import { CiShoppingCart } from "react-icons/ci";
+import { HiMiniUserCircle } from "react-icons/hi2";
+import { HiMiniShoppingCart } from "react-icons/hi2";
 import {BsChevronCompactUp} from "react-icons/bs"
 import {signIn, signOut, useSession } from 'next-auth/react';
 
@@ -51,10 +51,10 @@ const Navbar = (props: Props) => {
             <div className={styles.navbar_base}>
                 <div className={styles.navbar_base}>
                     <Link href='/'>
-                        <Image src={Logo} height={120} width={80} alt='logo' />
+                        <Image src={Logo} height={35} className={styles.image} alt='logo'/>
                     </Link>
                     <nav className={styles.navbar_base}>
-                        <ul className={styles.navbar_base}>
+                        <ul className={styles.navbar_texts}>
                             <li>
                                 <Link href="/" className=''> Inicio </Link>
                             </li>
@@ -66,9 +66,6 @@ const Navbar = (props: Props) => {
                             <li>
                                 <Link href="filter" className=''> Sobre </Link>
                             </li>
-                            <li>
-                                <Link href="contatos" className=''> Contatos </Link>
-                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -77,11 +74,11 @@ const Navbar = (props: Props) => {
                 <div className={styles.navbar_icons}>
                     <div className={styles.user_cart}>
                         <Link href='/carrinho'>
-                            <CiShoppingCart />
+                            <HiMiniShoppingCart size={25} className="mt-1"/>
                         </Link>
                     </div>
                     <div className={styles.user_icon} onClick={() => setShowProfile(!showProfile)}>
-                                <CiUser />
+                            <HiMiniUserCircle size={28} />
                         <div className={`text-xs mg-1 ${showProfile ? "" : "hidden"} ${styles.navbar_login}`} id=''> 
                         <SignOut/>
                         <span onClick={() => setShowNav(!showNav)} className='p-[9px] bg-gray-100 rounded-full md:hidden'>

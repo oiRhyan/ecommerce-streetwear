@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
 import axios from 'axios'
+import styles from '@/app/sass/form.module.sass'
 import { signIn } from 'next-auth/react'
 
 type Props = {}
@@ -26,10 +27,10 @@ const LoginForm = (props: Props) => {
     }
 
     return (
-        <div className=''>
+        <div className={styles.login}>
             <div className='p-10 rounded-lg shadow-lg flex flex-col'>
-                <h1 className='text-xl font-medium mb-4'> Login </h1>
-                <label htmlFor='' className='mb-2'>
+                <h1 className='text-xl font-medium mb-4 text-white'> Login </h1>
+                <label htmlFor='' className='mb-2 text-white'>
                         Email
                 </label>
                 <input 
@@ -40,7 +41,7 @@ const LoginForm = (props: Props) => {
                 placeholder='Digite seu email: '
                 onChange={(e) => setUser({...user, email: e.target.value})}
                 />
-                <label htmlFor='' className='mb-2'>
+                <label htmlFor='' className='mb-2 text-white'>
                         Senha
                 </label>
                 <input 
@@ -51,10 +52,10 @@ const LoginForm = (props: Props) => {
                 placeholder='Digite sua senha: '
                 onChange={(e) => setUser({...user, password: e.target.value})}
                 />
-                <button onClick={Login} className=''>
+                <button onClick={Login} className='text-white'>
                     <span> Entrar </span>
                 </button>
-                <Link href='/registrar' className=''>
+                <Link href='/registrar' className='text-white'>
                     Ainda não possuí uma conta? Cadastre-se Já!
                 </Link>
             </div>
